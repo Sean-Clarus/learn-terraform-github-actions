@@ -12,10 +12,10 @@ terraform {
   required_version = "~> 1.0"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "ACG-Terraform-Demos-Serdar"
 
     workspaces {
-      name = "REPLACE_ME"
+      name = "demo-github-actions"
     }
   }
 }
@@ -28,6 +28,8 @@ provider "aws" {
 
 
 resource "random_pet" "sg" {}
+
+# dummy line
 
 resource "aws_instance" "web" {
   ami                    = "ami-09e67e426f25ce0d7"
